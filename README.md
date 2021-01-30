@@ -1,9 +1,8 @@
 # GSaiDheeraj
-### Hi there, This is Sai Dheeraj Gummadi👋 <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow)</div>
-<p><em> <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100">
-</em></p> 
-<img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
+### Hi there, This is Sai Dheeraj Gummadi👋 <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow) <p><em> <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100">
+</em></p> </div>
 
+<img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
 
 - 🔭 I’m currently pre-final year student.
 - 🌱 I’m currently exploring stocks, some high rated books like "Think and Grow Rich by Napolean Hill" etc. and Data Science/ ML.
