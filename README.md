@@ -1,6 +1,8 @@
 # GSaiDheeraj
 ### Hi there, This is Sai Dheeraj Gummadi👋 <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow)</div>
 
+<div align = 'center'><h3> ⚡ Advanced Technology is truly indistinguishable from Magic.⚡ </h3>  </div>
+
 <img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
 <p><em>Data Science, Machine Learning Enthusiast.  <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100">
 </em></p> 
@@ -12,9 +14,9 @@
 - 💬 Ask me about Data analytics and Machine Learning.
 - 🥅 Goals: Contribute more to Open Source projects.
 - 📫 How to reach me: <a href= "https://www.linkedin.com/in/gummadi-saidheeraj/">LinkedIn</a>
-<div align = 'center'><h3> ⚡ fact: Advanced Technology is truly indistinguishable from Magic.⚡ </h3>  </div>
+<div align = 'center'><h3> ⚡ Advanced Technology is truly indistinguishable from Magic.⚡ </h3>  </div>
 <br><br>
-<br>
+
 
 <p align= "center"><img src="https://media2.giphy.com/media/QmGShkWAWid2hzCqHE/giphy.gif" width= "35" height= "70"></p>
 
