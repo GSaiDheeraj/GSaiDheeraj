@@ -12,7 +12,7 @@
 - 💬 Ask me about Data analytics and Machine Learning.
 - 🥅 Goals: Contribute more to Open Source projects.
 - 📫 How to reach me: <a href= "https://www.linkedin.com/in/gummadi-saidheeraj/">LinkedIn</a>
-- ⚡ fact: Advanced Technology is Truly indistinguishable from magic.
+- ⚡ fact: Advanced Technology is truly indistinguishable from Magic.⚡
 <br><br>
 <br>
 
