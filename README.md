@@ -2,7 +2,7 @@
 ### Hi there, This is Sai Dheeraj Gummadi👋 <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow)</div>
 
 <img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
-<p><em>Data Science, Machine Learning Enthusiasst<img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100"> 
+<p><em>Data Science, Machine Learning Enthusiast. <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100"> 
 </em></p>
 
 - 🔭 I’m currently pre-final year student.
