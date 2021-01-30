@@ -1,5 +1,5 @@
 # GSaiDheeraj
-### Hi there, This is Sai Dheeraj Gummadi👋 <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow) <p><em> <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100">
+### Hi there, This is Sai Dheeraj Gummadi <img src="https://thumbs.gfycat.com/NextFelineAplomadofalcon-size_restricted.gif" width="100"> <div align = 'right'>![](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=yellow) <p><em> 
 </em></p> </div>
 
 <img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
