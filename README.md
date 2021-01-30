@@ -6,7 +6,7 @@
 </em></p> 
 
 - 🔭 I’m currently pre-final year student.
-- 🌱 I’m currently exploring stocks, some high rated books and Data Science/ ML.
+- 🌱 I’m currently exploring stocks, some high rated books like "Think and Grow Rich by Napolean Hill" etc. and Data Science/ ML.
 - 👯 I’m looking to collaborate on Data Science stuffs
 - 🤔 I’m looking for help with Open Source Projects.
 - 💬 Ask me about Data analytics and Machine Learning.
