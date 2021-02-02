@@ -11,7 +11,7 @@
 - 💬 Ask me about Data analytics and Machine Learning.
 - 🥅 Goals: Contribute more to Open Source projects.
 - 📫 How to reach me: <a href= "https://www.linkedin.com/in/gummadi-saidheeraj/">LinkedIn</a>, <a href= "dheerajsaigummadi@gmail.com">Gmail</a>
-- ⚡ Advanced Technology is truly indistinguishable from Magic.⚡
+- ⚡The space in which we live should be for the person we are becoming now, not fot the person we were in the past ⚡
 <br><br>
 
 <p align= "center"><img src="https://media2.giphy.com/media/QmGShkWAWid2hzCqHE/giphy.gif" width= "35" height= "70"></p>
