@@ -19,7 +19,7 @@
 <hr>
 <img src="http://www.larrydmarshall.com/wp-content/uploads/2011/03/contactme.jpg" />
 
-- Portfolio : https://gsaidheeraj.github.io/My-Portfolio/
+- Portfolio : https://gsaidheeraj.github.io/gsd/
 - Linkedin : https://www.linkedin.com/in/gummadi-saidheeraj/
 - Blogger : https://studentprojectshub.blogspot.com/
 - Email : dheerajsaigummadi@gmail.com
