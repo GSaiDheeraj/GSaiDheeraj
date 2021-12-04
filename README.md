@@ -17,7 +17,7 @@
 
 <p align= "center"><img src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true"></p>
 <hr>
-<img src="https://spectrapackautomation.com/img/contactme.gif" />
+<img src="http://www.larrydmarshall.com/wp-content/uploads/2011/03/contactme.jpg" />
 
 - Portfolio : https://gsaidheeraj.github.io/My-Portfolio/
 - Linkedin : https://www.linkedin.com/in/gummadi-saidheeraj/
