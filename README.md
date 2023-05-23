@@ -5,7 +5,7 @@
 <img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
 
 - 🔭 I’m a Data Scientist at HighRadius.
-- 🌱 I’m currently masters student at Intternational University of Applied Sciences.
+- 🌱 I’m currently Data Science masters student at International University of Applied Sciences and London South Bank University.
 - 👯 I’m looking to collaborate on Data Science stuffs.
 - 💬 Ask me about Data analytics and Machine Learning.
 - 📫 How to reach me: <a href= "https://www.linkedin.com/in/gummadi-saidheeraj/">LinkedIn</a>, <a href= "dheerajsaigummadi@gmail.com">Gmail</a>
