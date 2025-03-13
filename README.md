@@ -4,10 +4,10 @@
 
 <img align='right' src="https://remakelearning.org/wp-content/uploads/2020/01/122.gif" width="230">
 
-- 🔭 I’m a Data Scientist at HighRadius.
-- 🌱 I’m currently Data Science masters student at International University of Applied Sciences and London South Bank University.
-- 👯 I’m looking to collaborate on Data Science stuffs.
-- 💬 Ask me about Data analytics and Machine Learning.
+- 🔭 I’m a Machine Learning Engineer at Motorola Solutions.
+- 🌱 With 4+ years of experience and Master's Degree in Data Science.
+- 👯 I’m looking to collaborate on Data Science/Machine Learning/LLM stuffs.
+- 💬 Ask me about Data Science, Finance, Business, GeoPOlitics, Software Development.
 - 📫 How to reach me: <a href= "https://www.linkedin.com/in/gummadi-saidheeraj/">LinkedIn</a>, <a href= "dheerajsaigummadi@gmail.com">Gmail</a>
 - ⚡The space in which we live should be for the person we are becoming now, not fot the person we were in the past ⚡
 <br><br>
