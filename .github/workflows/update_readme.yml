@@ -28,43 +28,67 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           python -c "
           import urllib.request, json, os, re, textwrap
 
           username = os.environ.get('GITHUB_USERNAME', 'GSaiDheeraj')
-          token = os.environ.get('GITHUB_TOKEN', '')
+          pat = os.environ.get('GH_PAT', '').strip()
+          token = pat if pat else os.environ.get('GITHUB_TOKEN', '').strip()
 
           headers = {'User-Agent': 'Python'}
           if token:
               headers['Authorization'] = f'token {token}'
 
-          # Fetch Repositories
+          # Fetch Repositories (support PAT for private repos with fallback to public)
           repos = []
           page = 1
-          while True:
-              url = f'https://api.github.com/users/{username}/repos?per_page=100&page={page}'
-              req = urllib.request.Request(url, headers=headers)
-              try:
-                  with urllib.request.urlopen(req) as resp:
-                      data = json.loads(resp.read().decode())
-                      if not data:
-                          break
-                      repos.extend(data)
-                      page += 1
-              except Exception as e:
-                  print('Error fetching repos:', e)
-                  break
 
-          public_repos = len(repos)
+          # First try with PAT if provided to fetch all repos (including private)
+          if pat:
+              while True:
+                  url = f'https://api.github.com/user/repos?visibility=all&per_page=100&page={page}'
+                  req = urllib.request.Request(url, headers=headers)
+                  try:
+                      with urllib.request.urlopen(req) as resp:
+                          data = json.loads(resp.read().decode())
+                          if not data:
+                              break
+                          repos.extend(data)
+                          page += 1
+                  except Exception as e:
+                      print('Error with PAT user repos, falling back to public repos:', e)
+                      repos = []
+                      break
+
+          # Fallback to public user repos endpoint if no PAT or if user repos failed
+          if not repos:
+              page = 1
+              while True:
+                  url = f'https://api.github.com/users/{username}/repos?per_page=100&page={page}'
+                  req = urllib.request.Request(url, headers=headers)
+                  try:
+                      with urllib.request.urlopen(req) as resp:
+                          data = json.loads(resp.read().decode())
+                          if not data:
+                              break
+                          repos.extend(data)
+                          page += 1
+                  except Exception as e:
+                      print('Error fetching public repos:', e)
+                      break
+
+          total_repos = len(repos)
           stars = sum(r.get('stargazers_count', 0) for r in repos)
           forks = sum(r.get('forks_count', 0) for r in repos)
 
           # Calculate total commits via repo commits API
           total_commits = 0
           for r in repos:
+              repo_owner = r.get('owner', {}).get('login', username)
               repo_name = r.get('name')
-              c_url = f'https://api.github.com/repos/{username}/{repo_name}/commits?per_page=1'
+              c_url = f'https://api.github.com/repos/{repo_owner}/{repo_name}/commits?per_page=1'
               req = urllib.request.Request(c_url, headers=headers)
               try:
                   with urllib.request.urlopen(req) as resp:
@@ -81,7 +105,7 @@ jobs:
                   pass
 
           # Calculate Grade / Rank (A++, A+, A, B+)
-          score = (stars * 4) + (forks * 3) + (public_repos * 2) + (total_commits * 0.5)
+          score = (stars * 4) + (forks * 3) + (total_repos * 2) + (total_commits * 0.5)
           if score > 200:
               rank = 'A++'
           elif score > 100:
@@ -120,7 +144,7 @@ jobs:
             <text x=\"160\" y=\"98\" class=\"stat-bold\">{stars}</text>
 
             <text x=\"25\" y=\"126\" class=\"stat\">Total Repos:</text>
-            <text x=\"160\" y=\"126\" class=\"stat-bold\">{public_repos}</text>
+            <text x=\"160\" y=\"126\" class=\"stat-bold\">{total_repos}</text>
 
             <text x=\"25\" y=\"154\" class=\"stat\">Total Forks:</text>
             <text x=\"160\" y=\"154\" class=\"stat-bold\">{forks}</text>
@@ -185,5 +209,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add github-stats.svg top-langs.svg README.md
-          git diff --staged --quiet || git commit -m "Update dynamic GitHub stats SVG cards in README"
+          git diff --staged --quiet || git commit -m "Update dynamic GitHub stats SVG cards including private repos in README"
           git push || true
