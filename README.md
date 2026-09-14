@@ -14,7 +14,25 @@
 
 <p align= "center"><img src="https://media2.giphy.com/media/QmGShkWAWid2hzCqHE/giphy.gif" width= "35" height= "70"></p>
 
-<p align= "center"><img src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true"></p>
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true&theme=radical&rank_icon=github"
+    alt="GitHub stats"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=GSaiDheeraj&layout=compact&theme=radical"
+    alt="Top languages"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=GSaiDheeraj&theme=react-dark"
+    alt="GitHub activity graph"
+  />
+</p>
+
+<!-- <p align= "center"><img src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true"></p> -->
 <hr>
 <img src="http://www.larrydmarshall.com/wp-content/uploads/2011/03/contactme.jpg" />
 
