@@ -1,8 +1,8 @@
 <div align="center">
 
-# 👋 Hi there, I'm G Sai Dheeraj
+# 👋 Hi there, I'm Dheeraj
 
-### 🤖 Machine Learning Engineer & Data Science Specialist
+### 🤖 Lead Data Scientist at The Hartford
 
 [![Profile Views](https://komarev.com/ghpvc/?username=GSaiDheeraj&color=0070f3&style=for-the-badge)](https://github.com/GSaiDheeraj)
 
@@ -12,11 +12,12 @@
 
 ### 👨‍💻 About Me
 
-- 🔭 **Current Role:** Machine Learning Engineer at Motorola Solutions.
-- 🌱 **Experience:** 4+ years of hands-on experience with a Master's Degree in Data Science.
+- 🔭 **Current Role:** Lead Data Scientist at The Hartford.
+- 🌱 **Experience:** 5+ Years of Experience.
+- 🎓 **Education:** Masters in Data Science and Economics.
+- 📚 **Author:** Published Books on [Amazon Book 1](https://www.amazon.com/dp/B0FF6CT6SW) & [Amazon Book 2](https://www.amazon.com/dp/B0GMRLLDTL).
 - 👯 **Collaboration:** Open to collaborating on Data Science, Machine Learning, and LLM projects.
 - 💬 **Ask Me About:** Data Science, Finance, Business, Geopolitics & Software Development.
-- ⚡ **Quote:** *"The space in which we live should be for the person we are becoming now, not for the person we were in the past."*
 
 <br/>
 
