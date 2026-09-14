@@ -16,11 +16,11 @@
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true&theme=radical&rank_icon=github"
+    src="https://github-readme-stats.vercel.app/api?username=GSaiDheeraj&show_icons=true&theme=radical&rank_icon=github&include_all_commits=true&count_private=true"
     alt="GitHub stats"
   />
   <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=GSaiDheeraj&layout=compact&theme=radical"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=GSaiDheeraj&layout=compact&theme=radical&count_private=true"
     alt="Top languages"
   />
 </p>
