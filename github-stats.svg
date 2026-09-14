@@ -1,0 +1,26 @@
+<svg width="450" height="200" viewBox="0 0 450 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #4801FF; }
+    .stat { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C9D1D9; }
+    .stat-bold { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; }
+    .rank-circle { font: 700 28px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38EF7D; }
+    .bg { fill: #0D1117; stroke: #30363D; stroke-width: 1px; rx: 10px; }
+  </style>
+  <rect width="450" height="200" class="bg" />
+  <text x="25" y="35" class="header">GSaiDheeraj's GitHub Stats</text>
+
+  <text x="25" y="70" class="stat">Total Commits:</text>
+  <text x="160" y="70" class="stat-bold">1091</text>
+
+  <text x="25" y="98" class="stat">Total Stars:</text>
+  <text x="160" y="98" class="stat-bold">32</text>
+
+  <text x="25" y="126" class="stat">Total Repos:</text>
+  <text x="160" y="126" class="stat-bold">52</text>
+
+  <text x="25" y="154" class="stat">Total Forks:</text>
+  <text x="160" y="154" class="stat-bold">16</text>
+
+  <circle cx="360" cy="105" r="45" fill="#161B22" stroke="#38EF7D" stroke-width="3"/>
+  <text x="360" y="115" text-anchor="middle" class="rank-circle">A++</text>
+</svg>

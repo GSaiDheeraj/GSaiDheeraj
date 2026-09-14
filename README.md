@@ -15,20 +15,10 @@
 <p align= "center"><img src="https://media2.giphy.com/media/QmGShkWAWid2hzCqHE/giphy.gif" width= "35" height= "70"></p>
 
 <!--START_SECTION:stats-->
-<div align="center">
-
-### 📊 Git Repository Stats & Overview
-
-| Metric | Count / Details |
-| :--- | :--- |
-| 📦 **Public Repositories** | 52 |
-| ⭐ **Total Stargazers** | 32 Stars |
-| 🔀 **Total Repository Forks** | 16 Forks |
-| 💻 **Top Languages** | Jupyter Notebook (26), HTML (8), Python (5), JavaScript (1) |
-| 🧑‍💻 **Role** | Machine Learning Engineer |
-| 🎓 **Education** | Master's Degree in Data Science |
-
-</div>
+<p align="center">
+  <img src="github-stats.svg" alt="GitHub Stats" />
+  <img src="top-langs.svg" alt="Top Languages" />
+</p>
 <!--END_SECTION:stats-->
 <hr>
 <img src="http://www.larrydmarshall.com/wp-content/uploads/2011/03/contactme.jpg" />

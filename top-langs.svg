@@ -1,0 +1,36 @@
+<svg width="420" height="200" viewBox="0 0 420 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #4801FF; }
+    .stat { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C9D1D9; }
+    .stat-bold { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; }
+    .bg { fill: #0D1117; stroke: #30363D; stroke-width: 1px; rx: 10px; }
+  </style>
+  <rect width="420" height="200" class="bg" />
+  <text x="25" y="35" class="header">Most Used Languages</text>
+
+    <text x="25" y="65" class="stat">Jupyter Notebook</text>
+    <rect x="160" y="55" width="180" height="8" rx="4" fill="#161B22" />
+    <rect x="160" y="55" width="114" height="8" rx="4" fill="#3572A5" />
+    <text x="350" y="65" class="stat-bold">63.4%</text>
+
+    <text x="25" y="91" class="stat">HTML</text>
+    <rect x="160" y="81" width="180" height="8" rx="4" fill="#161B22" />
+    <rect x="160" y="81" width="35" height="8" rx="4" fill="#DA5B0B" />
+    <text x="350" y="91" class="stat-bold">19.5%</text>
+
+    <text x="25" y="117" class="stat">Python</text>
+    <rect x="160" y="107" width="180" height="8" rx="4" fill="#161B22" />
+    <rect x="160" y="107" width="21" height="8" rx="4" fill="#F1E05A" />
+    <text x="350" y="117" class="stat-bold">12.2%</text>
+
+    <text x="25" y="143" class="stat">JavaScript</text>
+    <rect x="160" y="133" width="180" height="8" rx="4" fill="#161B22" />
+    <rect x="160" y="133" width="4" height="8" rx="4" fill="#E34C26" />
+    <text x="350" y="143" class="stat-bold">2.4%</text>
+
+    <text x="25" y="169" class="stat">MATLAB</text>
+    <rect x="160" y="159" width="180" height="8" rx="4" fill="#161B22" />
+    <rect x="160" y="159" width="4" height="8" rx="4" fill="#563D7C" />
+    <text x="350" y="169" class="stat-bold">2.4%</text>
+
+</svg>
