@@ -41,11 +41,9 @@ jobs:
           if token:
               headers['Authorization'] = f'token {token}'
 
-          # Fetch Repositories (support PAT for private repos with fallback to public)
           repos = []
           page = 1
 
-          # First try with PAT if provided to fetch all repos (including private)
           if pat:
               while True:
                   url = f'https://api.github.com/user/repos?visibility=all&per_page=100&page={page}'
@@ -62,7 +60,6 @@ jobs:
                       repos = []
                       break
 
-          # Fallback to public user repos endpoint if no PAT or if user repos failed
           if not repos:
               page = 1
               while True:
@@ -83,7 +80,6 @@ jobs:
           stars = sum(r.get('stargazers_count', 0) for r in repos)
           forks = sum(r.get('forks_count', 0) for r in repos)
 
-          # Calculate total commits via repo commits API
           total_commits = 0
           for r in repos:
               repo_owner = r.get('owner', {}).get('login', username)
@@ -104,7 +100,6 @@ jobs:
               except Exception:
                   pass
 
-          # Calculate Grade / Rank (A++, A+, A, B+)
           score = (stars * 4) + (forks * 3) + (total_repos * 2) + (total_commits * 0.5)
           if score > 200:
               rank = 'A++'
@@ -115,7 +110,6 @@ jobs:
           else:
               rank = 'B+'
 
-          # Language Breakdown
           langs = {}
           for r in repos:
               l = r.get('language')
@@ -125,71 +119,78 @@ jobs:
           total_lang_count = sum(langs.values()) if langs else 1
           top_langs = sorted(langs.items(), key=lambda x: x[1], reverse=True)[:5]
 
-          # Generate stats SVG Card
-          stats_svg = f'''<svg width=\"450\" height=\"200\" viewBox=\"0 0 450 200\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-            <style>
-              .header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #4801FF; }}
-              .stat {{ font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C9D1D9; }}
-              .stat-bold {{ font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; }}
-              .rank-circle {{ font: 700 28px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38EF7D; }}
-              .bg {{ fill: #0D1117; stroke: #30363D; stroke-width: 1px; rx: 10px; }}
-            </style>
-            <rect width=\"450\" height=\"200\" class=\"bg\" />
-            <text x=\"25\" y=\"35\" class=\"header\">{username}'s GitHub Stats</text>
+          stats_svg = f'''<svg width=\"450\" height=\"210\" viewBox=\"0 0 450 210\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <defs>
+              <linearGradient id=\"gradStats\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">
+                <stop offset=\"0%\" stop-color=\"#0F172A\" />
+                <stop offset=\"100%\" stop-color=\"#1E293B\" />
+              </linearGradient>
+              <linearGradient id=\"textGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">
+                <stop offset=\"0%\" stop-color=\"#38BDF8\" />
+                <stop offset=\"100%\" stop-color=\"#818CF8\" />
+              </linearGradient>
+            </defs>
+            <rect width=\"450\" height=\"210\" fill=\"url(#gradStats)\" stroke=\"#334155\" stroke-width=\"1.5\" rx=\"14\" />
+            <text x=\"28\" y=\"38\" font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-weight=\"700\" font-size=\"18\" fill=\"url(#textGrad)\">⚡ {username}'s GitHub Overview</text>
 
-            <text x=\"25\" y=\"70\" class=\"stat\">Total Commits:</text>
-            <text x=\"160\" y=\"70\" class=\"stat-bold\">{total_commits}</text>
+            <g font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-size=\"14\">
+              <text x=\"28\" y=\"75\" fill=\"#94A3B8\">Total Commits:</text>
+              <text x=\"165\" y=\"75\" font-weight=\"600\" fill=\"#F8FAFC\">{total_commits}</text>
 
-            <text x=\"25\" y=\"98\" class=\"stat\">Total Stars:</text>
-            <text x=\"160\" y=\"98\" class=\"stat-bold\">{stars}</text>
+              <text x=\"28\" y=\"105\" fill=\"#94A3B8\">Total Stars:</text>
+              <text x=\"165\" y=\"105\" font-weight=\"600\" fill=\"#F8FAFC\">{stars}</text>
 
-            <text x=\"25\" y=\"126\" class=\"stat\">Total Repos:</text>
-            <text x=\"160\" y=\"126\" class=\"stat-bold\">{total_repos}</text>
+              <text x=\"28\" y=\"135\" fill=\"#94A3B8\">Total Repositories:</text>
+              <text x=\"165\" y=\"135\" font-weight=\"600\" fill=\"#F8FAFC\">{total_repos}</text>
 
-            <text x=\"25\" y=\"154\" class=\"stat\">Total Forks:</text>
-            <text x=\"160\" y=\"154\" class=\"stat-bold\">{forks}</text>
+              <text x=\"28\" y=\"165\" fill=\"#94A3B8\">Total Forks:</text>
+              <text x=\"165\" y=\"165\" font-weight=\"600\" fill=\"#F8FAFC\">{forks}</text>
+            </g>
 
-            <circle cx=\"360\" cy=\"105\" r=\"45\" fill=\"#161B22\" stroke=\"#38EF7D\" stroke-width=\"3\"/>
-            <text x=\"360\" y=\"115\" text-anchor=\"middle\" class=\"rank-circle\">{rank}</text>
+            <circle cx=\"365\" cy=\"115\" r=\"44\" fill=\"#0284C7\" fill-opacity=\"0.15\" stroke=\"#38BDF8\" stroke-width=\"2.5\" />
+            <text x=\"365\" y=\"124\" text-anchor=\"middle\" font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-weight=\"800\" font-size=\"28\" fill=\"#38BDF8\">{rank}</text>
           </svg>'''
 
           with open('github-stats.svg', 'w', encoding='utf-8') as f:
               f.write(stats_svg)
 
-          # Generate Languages SVG Card
-          lang_colors = ['#3572A5', '#DA5B0B', '#F1E05A', '#E34C26', '#563D7C']
+          lang_colors = ['#38BDF8', '#818CF8', '#F43F5E', '#10B981', '#F59E0B']
           lang_items_svg = ''
-          y_offset = 65
+          y_offset = 72
           for i, (lang_name, count) in enumerate(top_langs):
               pct = round((count / total_lang_count) * 100, 1)
               color = lang_colors[i % len(lang_colors)]
               lang_items_svg += f'''
-              <text x=\"25\" y=\"{y_offset}\" class=\"stat\">{lang_name}</text>
-              <rect x=\"160\" y=\"{y_offset - 10}\" width=\"180\" height=\"8\" rx=\"4\" fill=\"#161B22\" />
+              <text x=\"28\" y=\"{y_offset}\" font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-size=\"13\" fill=\"#CBD5E1\">{lang_name}</text>
+              <rect x=\"160\" y=\"{y_offset - 10}\" width=\"180\" height=\"8\" rx=\"4\" fill=\"#334155\" />
               <rect x=\"160\" y=\"{y_offset - 10}\" width=\"{int(180 * (pct/100))}\" height=\"8\" rx=\"4\" fill=\"{color}\" />
-              <text x=\"350\" y=\"{y_offset}\" class=\"stat-bold\">{pct}%</text>
+              <text x=\"352\" y=\"{y_offset}\" font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-weight=\"600\" font-size=\"13\" fill=\"#F8FAFC\">{pct}%</text>
               '''
-              y_offset += 26
+              y_offset += 27
 
-          langs_svg = f'''<svg width=\"420\" height=\"200\" viewBox=\"0 0 420 200\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-            <style>
-              .header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #4801FF; }}
-              .stat {{ font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C9D1D9; }}
-              .stat-bold {{ font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF; }}
-              .bg {{ fill: #0D1117; stroke: #30363D; stroke-width: 1px; rx: 10px; }}
-            </style>
-            <rect width=\"420\" height=\"200\" class=\"bg\" />
-            <text x=\"25\" y=\"35\" class=\"header\">Most Used Languages</text>
+          langs_svg = f'''<svg width=\"420\" height=\"210\" viewBox=\"0 0 420 210\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+            <defs>
+              <linearGradient id=\"gradLangs\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">
+                <stop offset=\"0%\" stop-color=\"#0F172A\" />
+                <stop offset=\"100%\" stop-color=\"#1E293B\" />
+              </linearGradient>
+              <linearGradient id=\"textGradL\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">
+                <stop offset=\"0%\" stop-color=\"#38BDF8\" />
+                <stop offset=\"100%\" stop-color=\"#818CF8\" />
+              </linearGradient>
+            </defs>
+            <rect width=\"420\" height=\"210\" fill=\"url(#gradLangs)\" stroke=\"#334155\" stroke-width=\"1.5\" rx=\"14\" />
+            <text x=\"28\" y=\"38\" font-family=\"'Segoe UI', Ubuntu, sans-serif\" font-weight=\"700\" font-size=\"18\" fill=\"url(#textGradL)\">🚀 Most Used Languages</text>
             {lang_items_svg}
           </svg>'''
 
           with open('top-langs.svg', 'w', encoding='utf-8') as f:
               f.write(langs_svg)
 
-          # Update README.md
           readme_section = textwrap.dedent('''<!--START_SECTION:stats-->
           <p align=\"center\">
             <img src=\"github-stats.svg\" alt=\"GitHub Stats\" />
+            &nbsp;&nbsp;
             <img src=\"top-langs.svg\" alt=\"Top Languages\" />
           </p>
           <!--END_SECTION:stats-->''')
