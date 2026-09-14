@@ -15,7 +15,7 @@
 - 🔭 **Current Role:** Lead Data Scientist at The Hartford.
 - 🌱 **Experience:** 5+ Years of Experience.
 - 🎓 **Education:** Masters in Data Science and Economics.
-- 📚 **Author:** Published Books on [Amazon Book 1](https://www.amazon.com/dp/B0FF6CT6SW) & [Amazon Book 2](https://www.amazon.com/dp/B0GMRLLDTL).
+- 📚 **Author:** Published Books on [Cracking Data Science Case Study Interview](https://www.amazon.com/dp/B0FF6CT6SW) & [The Complete Hands-On Language Models Playbook](https://www.amazon.com/dp/B0GMRLLDTL).
 - 👯 **Collaboration:** Open to collaborating on Data Science, Machine Learning, and LLM projects.
 - 💬 **Ask Me About:** Data Science, Finance, Business, Geopolitics & Software Development.
 
