@@ -14,18 +14,18 @@
   
     <text x="28" y="72" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="13" fill="#CBD5E1">Jupyter Notebook</text>
     <rect x="160" y="62" width="180" height="8" rx="4" fill="#334155" />
-    <rect x="160" y="62" width="114" height="8" rx="4" fill="#38BDF8" />
-    <text x="352" y="72" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">63.4%</text>
+    <rect x="160" y="62" width="111" height="8" rx="4" fill="#38BDF8" />
+    <text x="352" y="72" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">61.9%</text>
     
     <text x="28" y="99" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="13" fill="#CBD5E1">HTML</text>
     <rect x="160" y="89" width="180" height="8" rx="4" fill="#334155" />
-    <rect x="160" y="89" width="35" height="8" rx="4" fill="#818CF8" />
-    <text x="352" y="99" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">19.5%</text>
+    <rect x="160" y="89" width="34" height="8" rx="4" fill="#818CF8" />
+    <text x="352" y="99" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">19.0%</text>
     
     <text x="28" y="126" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="13" fill="#CBD5E1">Python</text>
     <rect x="160" y="116" width="180" height="8" rx="4" fill="#334155" />
-    <rect x="160" y="116" width="21" height="8" rx="4" fill="#F43F5E" />
-    <text x="352" y="126" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">12.2%</text>
+    <rect x="160" y="116" width="25" height="8" rx="4" fill="#F43F5E" />
+    <text x="352" y="126" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="600" font-size="13" fill="#F8FAFC">14.3%</text>
     
     <text x="28" y="153" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="13" fill="#CBD5E1">JavaScript</text>
     <rect x="160" y="143" width="180" height="8" rx="4" fill="#334155" />
